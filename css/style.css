@@ -1,0 +1,224 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Alegreya', serif;
+    background: #F4F0DE;
+    color: #00263E;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 42px;
+    line-height: 46px;
+    font-weight: 400;
+}
+
+a:any-link {
+    text-decoration: none;
+    outline: 0;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.underline {
+    position: relative;
+    color: #0017E1;
+    white-space: nowrap;
+}
+
+.underline::before {
+    position: absolute;
+    content: '';
+    bottom: 1px;
+    height: 1px;
+    width: 100%;
+    background: #0017E1;
+}
+
+.main_container {
+    display: flex;
+    gap: 40px;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 80px 100px 40px 100px;
+}
+
+.avatar {
+    border-radius: 50%;
+    max-width: 173px;
+    max-height: 173px;
+}
+
+.content {
+    position: relative;
+    display: flex;
+    gap: 40px;
+    padding-top: 32px;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 1.05;
+    max-width: 707px;
+    font-size: 22px;
+    line-height: 28px;
+}
+
+.col p+p {
+    padding-top: 32px;
+}
+
+.list_principle {
+    padding-top: 32px;
+    padding-left: 30px;
+}
+
+.list_principle li {
+    padding-bottom: 32px;
+}
+
+.list_theme {
+    padding-bottom: 32px;
+    padding-left: 36px;
+}
+
+.sidebar {
+    position: sticky;
+    top: 32px;
+    font-family: "Alegreya Sans";
+    max-width: 280px;
+    height: 100%;
+    border-radius: 8px;
+    background: #fff;
+    padding: 16px;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.sidebar p+p {
+    font-size: 16px;
+    line-height: 18px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.btn {
+    font-family: "Alegreya Sans";
+    display: flex;
+    padding: 12px;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    color: #fff;
+    background: #0017E1;
+    border-radius: 4px;
+    font-size: 18px;
+    width: 100%;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1200px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .avatar {
+        max-width: 136px;
+        max-height: 133px;
+    }
+
+    .sidebar {
+        max-width: inherit;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .main_container {
+        flex-direction: column;
+        padding: 120px 40px 40px 40px;
+    }
+
+    .avatar {
+        max-width: 173px;
+        max-height: 173px;
+    }
+
+    .col {
+        font-size: 28px;
+        line-height: 38px;
+    }
+
+    .sidebar {
+        font-size: 28px;
+        line-height: 32px;
+    }
+
+    .sidebar p + p {
+        font-size: 24px;
+        line-height: 26px;
+    }
+}
+
+@media screen and (max-width: 440px) {
+
+    .main_container {
+        padding: 30px 16px 16px 16px;
+        gap: 20px;
+    }
+
+    h1 {
+        font-size: 30px;
+        line-height: 36px;
+    }
+
+    .col {
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+    .content {
+        gap: 20px;
+        padding-top: 16px;
+    }
+
+    .col p+p {
+        padding-top: 16px;
+    }
+
+    .list_principle {
+        padding-top: 16px;
+    }
+
+    .list_principle li {
+        padding-bottom: 16px;
+    }
+
+    .list_theme {
+        padding-bottom: 16px;
+    }
+
+    .sidebar {
+        font-size: 22px;
+        line-height: 26px;
+    }
+
+    .sidebar p + p {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .btn {
+        padding: 8px;
+    }
+}
